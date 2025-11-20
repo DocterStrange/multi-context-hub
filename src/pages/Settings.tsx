@@ -93,6 +93,37 @@ export default function Settings() {
           <TabsContent value="billing" className="space-y-6">
             <Card>
               <CardHeader>
+                <CardTitle>Pricing Information</CardTitle>
+                <CardDescription>
+                  Simple pay-as-you-go pricing for document processing
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/50">
+                    <div className="flex-1 space-y-1">
+                      <p className="font-semibold text-foreground">Pay as you go</p>
+                      <p className="text-sm text-muted-foreground">Only pay for what you use. No subscriptions or commitments.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/50">
+                    <div className="flex-1 space-y-1">
+                      <p className="font-semibold text-foreground">$0.15 per credit</p>
+                      <p className="text-sm text-muted-foreground">Buy credits in any amount. Credits never expire.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/50">
+                    <div className="flex-1 space-y-1">
+                      <p className="font-semibold text-foreground">1 credit = 1 page conversion</p>
+                      <p className="text-sm text-muted-foreground">Process PDF pages at a predictable, flat rate.</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
                 <CardTitle>Individual Credit Balance</CardTitle>
                 <CardDescription>
                   Manage your personal credits

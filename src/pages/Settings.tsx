@@ -99,26 +99,11 @@ export default function Settings() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/50">
-                    <div className="flex-1 space-y-1">
-                      <p className="font-semibold text-foreground">Pay as you go</p>
-                      <p className="text-sm text-muted-foreground">Only pay for what you use. No subscriptions or commitments.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/50">
-                    <div className="flex-1 space-y-1">
-                      <p className="font-semibold text-foreground">$0.15 per credit</p>
-                      <p className="text-sm text-muted-foreground">Buy credits in any amount. Credits never expire.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3 p-4 rounded-lg border border-border bg-muted/50">
-                    <div className="flex-1 space-y-1">
-                      <p className="font-semibold text-foreground">1 credit = 1 page conversion</p>
-                      <p className="text-sm text-muted-foreground">Process PDF pages at a predictable, flat rate.</p>
-                    </div>
-                  </div>
-                </div>
+                <ul className="space-y-2 text-sm list-disc list-inside">
+                  <li><span className="font-medium">Pay as you go</span> - Only pay for what you use, no subscriptions</li>
+                  <li><span className="font-medium">$0.15 per credit</span> - Buy any amount, credits never expire</li>
+                  <li><span className="font-medium">1 credit = 1 page conversion</span> - Predictable, flat rate pricing</li>
+                </ul>
               </CardContent>
             </Card>
 

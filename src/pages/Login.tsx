@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FileText, Shield, Zap, Check, Sparkles, Upload, Download } from "lucide-react";
+import { FileText, Check, PenLine, ArrowRight } from "lucide-react";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -38,13 +38,20 @@ export default function Login() {
           <div className="absolute -bottom-20 left-1/3 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
         </div>
 
+        {/* Floating Icons */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <PenLine className="absolute top-[15%] left-[10%] h-12 w-12 text-primary/20 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          <FileText className="absolute top-[25%] right-[15%] h-16 w-16 text-primary/15 animate-pulse" style={{ animationDelay: '1.5s' }} />
+          <ArrowRight className="absolute top-[50%] left-[20%] h-10 w-10 text-primary/20 animate-pulse" style={{ animationDelay: '2s' }} />
+          <PenLine className="absolute bottom-[30%] right-[10%] h-14 w-14 text-primary/15 animate-pulse" style={{ animationDelay: '0.8s' }} />
+          <FileText className="absolute bottom-[15%] left-[15%] h-10 w-10 text-primary/20 animate-pulse" style={{ animationDelay: '1.2s' }} />
+        </div>
+
         <div className="relative z-10 max-w-xl mx-auto lg:mx-0">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 backdrop-blur border border-border/50 mb-8 animate-fade-in">
-            <Shield className="h-4 w-4 text-primary" />
-            <span className="text-sm text-muted-foreground">
-              Trusted by Leading Faculty at <span className="font-semibold text-foreground">Texas A&M University</span>
-            </span>
+          {/* Logo */}
+          <div className="flex items-center gap-3 mb-8 animate-fade-in">
+            <FileText className="h-10 w-10 text-primary" />
+            <span className="text-3xl font-bold">Smart Note</span>
           </div>
 
           {/* Main Headline */}
@@ -60,7 +67,7 @@ export default function Login() {
           </p>
 
           {/* Value Propositions */}
-          <div className="flex flex-wrap gap-4 mb-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="flex items-center gap-2">
               <Check className="h-5 w-5 text-primary" />
               <span className="text-sm font-medium">20 Free Credits</span>
@@ -74,55 +81,12 @@ export default function Login() {
               <span className="text-sm font-medium">1 Credit = 1 Page ($0.15)</span>
             </div>
           </div>
-
-          {/* How It Works */}
-          <div className="space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-primary" />
-              How It Works
-            </h3>
-            <div className="grid gap-4">
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-background/60 backdrop-blur border border-border/50 transition-all hover:bg-background/80 hover:border-primary/30">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Upload className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Upload Your PDF</h4>
-                  <p className="text-sm text-muted-foreground">Drag and drop your handwritten notes or scanned documents</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-background/60 backdrop-blur border border-border/50 transition-all hover:bg-background/80 hover:border-primary/30">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Zap className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">AI Converts Instantly</h4>
-                  <p className="text-sm text-muted-foreground">Full ADA & WCAG 2.1 compliance processed automatically</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4 p-4 rounded-xl bg-background/60 backdrop-blur border border-border/50 transition-all hover:bg-background/80 hover:border-primary/30">
-                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Download className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Download & Edit</h4>
-                  <p className="text-sm text-muted-foreground">Get your accessible document with our powerful editor</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Right Panel - Login Form */}
       <div className="lg:w-1/2 flex items-center justify-center p-8 lg:p-12 bg-background">
         <div className="w-full max-w-md animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          {/* Logo */}
-          <div className="flex items-center justify-center gap-2 mb-8">
-            <FileText className="h-10 w-10 text-primary" />
-            <span className="text-3xl font-bold">Smart Note</span>
-          </div>
-
           <Tabs defaultValue="login" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="login">Login</TabsTrigger>
